@@ -15,14 +15,16 @@ PLY files exported straight from Magica Voxel work with aframe-extras with afram
     <body>
 
     <a-scene>
-      <a-sky color="lightblue"></a-sky>
-      <!--<a-box color="green" position="0 1.5 -2"></a-box>-->
+        <a-sky color="lightblue"></a-sky>
+        <a-sky color="red"></a-sky>
+        <!--<a-box color="green" position="0 1.5 -2"></a-box>-->
       
      <a-assets>
        <!-- loading the CodeHS party monkey as an asset causes it to fail when loaded directly (Red box monkey).
        The first Monkey will display if the following line is commented, it will fail if the line is uncommented
+            -->
        <a-asset-item id="partyMonkey" src="https://codehs.com/uploads/323532a74df46715de464639b0bf5480"></a-asset-item>
-             -->
+  
 
        <a-asset-item id="partyMonkey2" src="Monkey2.glb"></a-asset-item>
        
@@ -67,7 +69,7 @@ PLY files exported straight from Magica Voxel work with aframe-extras with afram
         position="-2 -1 -4"
         rotation="-90 0 0"
     ></a-entity>
-<!-- Fails -->
+<!-- Works -->
     <a-entity ply-model="src: knight.ply"
         position="0 -1 -4"
         rotation="-90 0 0"
@@ -77,29 +79,34 @@ PLY files exported straight from Magica Voxel work with aframe-extras with afram
         position="2 -1 -4"
         rotation="-90 0 0"
     ></a-entity>
-<!-- Fails -->
+<!-- Works -->
        <a-entity ply-model="src: #knight2"
         position="4 -1 -4"
         rotation="-90 0 0"
     ></a-entity>    
-     
+    
+<!-- Fails -->
     <a-box 
         position="-2 -1 -5"
         src="https://www.publicdomainpictures.net/pictures/350000/velka/texture-gazon-1.jpg" 
     ></a-box>
-    <a-box 
+<!-- Works -->
+<a-box 
         position="-0 -1 -5"
         src="grass.jpg"
     ></a-box>
-    <a-box 
+<!-- Works -->
+<a-box 
         position="2 -1 -5"
         src="https://codehs.com/uploads/3a99fbce3e172bbaa952f2493760cc5d"
     ></a-box>
-        <a-box 
+<!-- Works -->
+<a-box 
         position="4 -1 -5"
         src="#grassAsset"
     ></a-box>
-    <a-box 
+<!-- Works -->
+<a-box 
         position="6 -1 -5"
         src="#grassAsset2"
     ></a-box>
